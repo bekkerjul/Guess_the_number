@@ -1,0 +1,19 @@
+from random import randint
+
+my_number = randint(1, 100)
+
+print('Загадываем число от 1 до 100')
+print('Угадайте, какое число мы загадали')
+
+while True:
+  number = input()
+  if number.isdigit():
+    if int(number) > my_number:
+      print('Неправильно! Наше число меньше, попробуйте еще раз')
+    elif int(number) < my_number:
+      print('Неправильно! Наше число больше, попробуйте еще раз')
+    else:
+      print('Правильно! Вы угадали число')
+      break
+  else:
+      print('Ошибка! Введите число')
